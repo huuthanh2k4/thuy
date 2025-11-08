@@ -1,7 +1,7 @@
 // Lấy các phần tử cần thiết
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImage");
-const galleryImages = Array.from(document.querySelectorAll(".gallery .image-container img")); // Chuyển thành Array để dùng indexOf
+    const galleryImages = Array.from(document.querySelectorAll(".gallery .image-container img")); // Chuyển thành Array để dùng indexOf
 const closeBtn = document.querySelector(".modal .close");
 const prevBtn = document.querySelector(".modal .prev");
 const nextBtn = document.querySelector(".modal .next");
