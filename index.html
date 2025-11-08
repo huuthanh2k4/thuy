@@ -10,6 +10,11 @@
     <header>
         <h1>Ảnh Tĩnh (Dùng Link)</h1>
     </header>
+    <div style="text-align: center; padding: 15px;">
+        <a href="Đề cương ôn tập gửi cs.docx" download class="download-link">
+            Tải về: Đề cương ôn tập
+        </a>
+    </div>
     <main class="gallery">
         <div class="image-container">
             <img src="1.jpg" alt="Ảnh Link 1">
@@ -42,5 +47,17 @@
             <img src="10.jpg" alt="Ảnh Link 10">
         </div>
     </main>
+
+    <!-- The Modal/Lightbox -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+
+        <!-- Navigation Arrows -->
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
