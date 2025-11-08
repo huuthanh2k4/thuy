@@ -1,0 +1,58 @@
+/* Thiết lập cơ bản và font chữ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền nhẹ */
+    color: #333;
+}
+
+/* Tiêu đề trang */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky; /* Giữ tiêu đề ở trên cùng khi cuộn */
+    top: 0;
+    z-index: 10;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em; /* Kích thước font hợp lý cho di động */
+}
+
+/* Vùng chứa ảnh */
+.gallery {
+    padding: 10px;
+    display: flex; /* Dùng flexbox để sắp xếp */
+    flex-direction: column; /* Xếp ảnh theo cột, tối ưu cho di động */
+    gap: 15px; /* Khoảng cách giữa các ảnh */
+}
+
+/* Vùng chứa từng ảnh */
+.image-container {
+    background-color: white;
+    border-radius: 8px; /* Bo góc nhẹ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng nổi */
+    overflow: hidden; /* Đảm bảo ảnh không tràn ra khỏi container */
+}
+
+/* Ảnh */
+.image-container img {
+    /* **Tối ưu hóa di động:** Ảnh chiếm toàn bộ chiều rộng (100%) */
+    width: 100%; 
+    height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
+    display: block; 
+}
+
+/* Tùy chọn: Media Query cho máy tính bảng/màn hình lớn hơn (hiển thị 2-3 ảnh/hàng) */
+@media (min-width: 600px) {
+    .gallery {
+        max-width: 900px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+}
